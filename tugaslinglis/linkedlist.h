@@ -5,20 +5,9 @@ class Node {
     public:
         int data;
         Node* next;
-        Node(int data) : data(data), next(NULL) {
-
+        Node(int data) {
+            this->data = data;
+            this->next = nullptr;
         }
-    void insert(Node*& head, int data) {
-        Node* newNode = new Node(data);
-        if (head == NULL) {
-            head = newNode;
-        } else {
-            Node* current = head;
-            while (current->next != NULL) {
-                current = current->next;
-            }
-            current->next = newNode;
-        }
-    }
 };
 #endif
