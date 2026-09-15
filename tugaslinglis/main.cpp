@@ -67,14 +67,14 @@ int main() {
             cin>>Bufferposition;
             list.insertMiddle(BufferData, Bufferposition);
             cout<<endl;
-            cout<<"Tekan apasaja untuk Kembali"<<endl;
+            cout<<"Tekan apasaja untuk Kembali";
             cin.get();
         } else if (bufferInput == 5) {
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "\033[2J\033[H";
-            list.printingLinkedlist();
+            list.deleteHead();
             cout<<endl;
-            cout<<"Tekan apasaja untuk Kembali"<<endl;
+            cout<<"Tekan apasaja untuk Kembali";
             cin.get();
         } else if (bufferInput == 6) {
             cin.ignore(numeric_limits<streamsize>::max(), '\n');

@@ -51,4 +51,15 @@ void Linkedlist::insertTail(int data) {
     std::cout<<"Penambahan data berhasil"<<std::endl;
 }
 
-void Linkedlist::
+void Linkedlist::deleteHead() {
+    if (head == nullptr) {
+        std::cout<<"Linked List kosong"<<std::endl;
+        return;
+    }
+
+    Node* temp = head;
+    head = head->next;
+    delete temp;
+
+    std::cout<<"Penghapusan data depan berhasil"<<std::endl;
+}

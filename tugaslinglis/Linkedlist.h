@@ -15,4 +15,5 @@ class Linkedlist {
         void insertHead(int data);
         void insertTail(int data);
         void insertMiddle(int data, int position);
+        void deleteHead();
 };
