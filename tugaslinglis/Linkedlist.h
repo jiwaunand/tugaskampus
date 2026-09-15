@@ -11,6 +11,8 @@ class Linkedlist {
     public:
         Node* head;
         Linkedlist();
-        void insertChild(int data);
         void printingLinkedlist();
+        void insertHead(int data);
+        void insertTail(int data);
+        void insertMiddle(int data, int position);
 };

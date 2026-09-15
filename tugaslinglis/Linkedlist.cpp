@@ -18,16 +18,37 @@ void Linkedlist::printingLinkedlist() {
     }
 }
 
-void Linkedlist::insertChild(int data) {
+void Linkedlist::insertHead(int data) {
     Node* newNode = new Node(data);
     if (head == nullptr) {
         head = newNode;
+        std::cout<<"Penambahan data awal berhasil"<<std::endl;
         return;
     }
+    newNode->next = head;
+    head = newNode;
+    std::cout<<"Penambahan data berhasil"<<std::endl;
+}
+
+void Linkedlist::insertMiddle(int data, int position) {
+    Node* newNode = new Node(data);
     Node* current = head;
-    while(current != nullptr) {
+    for(int i = 0; i < position - 1; i++) {
+        current = current->next;
+    }
+    newNode->next = current->next;
+    current->next = newNode;
+    std::cout<<"Penambahan data berhasil"<<std::endl;
+}
+
+void Linkedlist::insertTail(int data) {
+    Node* newNode = new Node(data);
+    Node* current = head;
+    while(current->next != nullptr) {
         current = current->next;
     }
     current->next = newNode;
-
+    std::cout<<"Penambahan data berhasil"<<std::endl;
 }
+
+void Linkedlist::
